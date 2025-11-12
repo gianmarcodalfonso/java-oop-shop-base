@@ -10,7 +10,7 @@ public class Product {
   int iva;
 
   // costruttore
-  Product(String name, String description, float price) {
+  public Product(String name, String description, float price) {
     // genero codice random
     java.util.Random r = new Random();
     int codeMaxLength = 9999999;
@@ -20,6 +20,7 @@ public class Product {
     this.name = name;
     this.description = description;
     this.price = price;
+    this.iva = 25;
   }
 
   // metodi
@@ -30,7 +31,7 @@ public class Product {
 
   // espongo prezzo comprensivo di iva
   void showTotalPrice() {
-    float totalPrice = this.price + (this.price * (this.iva / 100));
+    float totalPrice = this.price + (this.price * (this.iva / 100f));
     System.out.println(totalPrice);
   }
 
