@@ -9,7 +9,7 @@ public class Product {
   float price;
   int iva;
 
-  //costruttore
+  // costruttore
   Product(String name, String description, float price) {
     // genero codice random
     java.util.Random r = new Random();
@@ -20,6 +20,23 @@ public class Product {
     this.name = name;
     this.description = description;
     this.price = price;
+  }
+
+  // metodi
+  // espongo prezzo base
+  void showPrice() {
+    System.out.println(this.price);
+  }
+
+  // espongo prezzo comprensivo di iva
+  void showTotalPrice() {
+    float totalPrice = this.price + (this.price * (this.iva / 100));
+    System.out.println(totalPrice);
+  }
+
+  // espongo nome esteso
+  void showFullName() {
+    System.out.println(this.code + "-" + this.name);
   }
 
 
