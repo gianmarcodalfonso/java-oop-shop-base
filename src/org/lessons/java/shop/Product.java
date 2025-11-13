@@ -3,11 +3,34 @@ import java.util.Random;
 
 public class Product {
   //attributi
-  int code;
-  String name;
-  String description;
-  float price;
-  int iva;
+  private int code;
+  private String name;
+  private String description;
+  private float price;
+  private float iva;
+
+  // getter
+
+  public int getCode(){
+      return this.code;
+  }
+
+  public String getName(){
+    return this.name;
+  }
+  
+  public String getdescritption(){
+    return this.description;
+  }
+
+  public float getprice(){
+    return this.price;
+  }
+  
+  public float getIva(){
+    return this.iva;
+  }
+
 
   // costruttore
   public Product(String name, String description, float price) {
@@ -20,7 +43,7 @@ public class Product {
     this.name = name;
     this.description = description;
     this.price = price;
-    this.iva = 25;
+    this.iva = 0.25f;
   }
 
   // metodi
@@ -31,7 +54,7 @@ public class Product {
 
   // espongo prezzo comprensivo di iva
   void showTotalPrice() {
-    float totalPrice = this.price + (this.price * (this.iva / 100f));
+    float totalPrice = this.price + (this.price * this.iva);
     System.out.println(totalPrice);
   }
 
