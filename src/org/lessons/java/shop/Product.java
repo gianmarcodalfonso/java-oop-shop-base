@@ -31,6 +31,34 @@ public class Product {
     return this.iva;
   }
 
+  // setter
+
+  // *accessibile solo in lettura*
+  // public void setCode(int newCode){
+  //   if(newCode >= 0 ){
+  //     this.code = newCode;
+  //   }
+  // }
+
+  public void setName(String newName){
+      this.name = newName;
+  }
+
+  public void setdescription(String newDescription){
+      this.description = newDescription;
+  }
+  
+  public void setPrice(float newPrice){
+    if(newPrice >= 0 ){
+      this.price = newPrice;
+    }
+  }
+  
+  public void setIva(float newIva){
+    if(newIva >= 0 ){
+      this.iva = newIva;
+    }
+  }
 
   // costruttore
   public Product(String name, String description, float price) {
