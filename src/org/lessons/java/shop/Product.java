@@ -74,6 +74,21 @@ public class Product {
     this.iva = 0.25f;
   }
 
+  // costruttore senza descrizione
+  public Product(String name, float price) {
+    // genero codice random
+    java.util.Random r = new Random();
+    int codeMaxLength = 9999999;
+    this.code = r.nextInt(codeMaxLength);
+
+    // assegno i valori tramite il costruttore
+    this.name = name;
+    this.description = "no description";
+    this.price = price;
+    this.iva = 0.25f;
+  }
+
+
   // metodi
   // espongo prezzo base
   void showPrice() {
